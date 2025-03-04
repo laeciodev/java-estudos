@@ -8,22 +8,27 @@ public class conversorDeTemperatura {
     public static void main(String[] args) {
         
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Olá, Seja Bem Vindo(a) ao Conversor de Temperatura!");
+        System.out.println(" ");
         System.out.println("Escolha uma opção: ");
         System.out.println("1 - Celsius para Fahrenheit");
         System.out.println("2 - Fahrenheit para Celsius");
+        System.out.println(" ");
 
         int opcao = scanner.nextInt();
 
         if(opcao == 1){
+            System.out.println(" ");
             System.out.println("Digite a temperatura em Celsius: ");
             double celsius = scanner.nextDouble();
             double fahrenheit = converterCelsius(celsius);
-            System.out.println(celsius + "°C equivale a " + fahrenheit + "°F");
+            System.out.println(String.format("%.2f°C equivale a %.2f°F", celsius, fahrenheit));
         } else if(opcao == 2){
+            System.out.println(" ");
             System.out.println("Digite a temperatura em Fahrenheit: ");
             double fahrenheit = scanner.nextDouble();
             double celsius = converterFahrenheit(fahrenheit);
-            System.out.println(fahrenheit +  "°F equivale a " + celsius + "°C");
+            System.out.println(String.format("%.2f°F equivale a %.2f°C", fahrenheit, celsius));
         } else {
             System.out.println("Opção inválida!");
         }
